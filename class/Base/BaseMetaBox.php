@@ -1,6 +1,5 @@
 <?php
-
-abstract class BaseMetaBox
+abstract class BaseMetaBox implements BaseInterface
 {
     /**
      * @var string

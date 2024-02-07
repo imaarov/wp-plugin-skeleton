@@ -1,5 +1,4 @@
 <?php
-include_once 'Base/BaseMenu.php';
 class User extends BaseMenu
 {
     public function __construct()

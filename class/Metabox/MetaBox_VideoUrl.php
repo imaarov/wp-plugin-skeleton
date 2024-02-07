@@ -1,5 +1,4 @@
 <?php
-include_once 'Base/BaseMetaBox.php';
 class MetaBox_VideoUrl extends BaseMetaBox
 {
 

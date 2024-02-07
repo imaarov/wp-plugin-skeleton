@@ -1,5 +1,4 @@
 <?php
-include_once 'Base/BaseCustomPostType.php';
 class PostType_Course extends BaseCustomPostType
 {
     public function __construct()

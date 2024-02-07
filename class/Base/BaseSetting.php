@@ -1,6 +1,5 @@
 <?php
-
-abstract class BaseSetting
+abstract class BaseSetting implements BaseInterface
 {
     protected mixed $args = [],
                     $option_name,

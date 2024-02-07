@@ -1,6 +1,5 @@
 <?php
-
-abstract class BaseWidget
+abstract class BaseWidget implements BaseInterface
 {
     protected mixed $ID,
                     $widget_name,

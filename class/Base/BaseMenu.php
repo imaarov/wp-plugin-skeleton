@@ -1,6 +1,5 @@
 <?php
-
-abstract class BaseMenu
+abstract class BaseMenu implements BaseInterface
 {
     protected string $page_title,
                      $menu_title,

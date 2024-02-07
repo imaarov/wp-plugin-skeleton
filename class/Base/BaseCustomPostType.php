@@ -1,5 +1,4 @@
 <?php
-include_once './../../interface/BaseInterface.php';
 abstract class BaseCustomPostType implements BaseInterface
 {
     protected array  $labels             = [],

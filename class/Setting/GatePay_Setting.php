@@ -1,5 +1,4 @@
 <?php
-include_once 'Base/BaseSetting.php';
 class GatePay_Setting extends BaseSetting
 {
     public function __construct()

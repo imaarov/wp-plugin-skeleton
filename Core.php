@@ -6,10 +6,9 @@ Description: OOP plugin core sample base
 Author: Iman Atarof - Imaarov
 License: GPLv2 or later
 */
-include_once 'class/Menu/User.php';
-include_once 'class/Metabox/MetaBox_VideoUrl.php';
-include_once 'class/PostType/PostType_Course.php';
-include_once 'class/Widget/Widget_User.php';
+
+include_once 'AutoLoad.php';
+include_once 'interface/BaseInterface.php';
 defined('ABSPATH') || exit;
 
 /**
@@ -38,6 +37,7 @@ class Core
     {
         define($this->signature . '_PLUGIN_DIR', plugin_dir_path(__FILE__));
         define($this->signature . '_PLUGIN_URL', plugin_dir_url(__FILE__));
+        define($this->signature . '_PLUGIN_Base_CLASS', plugin_dir_url(__FILE__. "/Base/"));
     }
 
     /**
@@ -50,7 +50,7 @@ class Core
         register_activation_hook(__FILE__, [$this , 'deactivation']);
         add_action('admin_enqueue_scripts', [$this, 'register_assets']);
         add_action('wp_enqueue_scripts', [$this, 'register_assets']);
-        $this->load_entities();
+//        $this->load_entities();
     }
 
     /**
@@ -97,13 +97,18 @@ class Core
      * Loaded Module
      * @return void
      */
-    public function load_entities() : void
+    public function load_entities(BaseInterface $baseClass) : self
     {
-        new User();
-        new MetaBox_VideoUrl();
-        new PostType_Course();
-        new Widget_User();
+        $baseClass;
+        return $this;
     }
 }
 
+
+//var_dump(OOP_PLUGIN_DIR);
+//new PostType_Course();
 $core = new Core('oop');
+$core->load_entities(new User())
+     ->load_entities(new MetaBox_VideoUrl())
+     ->load_entities(new PostType_Course())
+     ->load_entities(new Widget_User());

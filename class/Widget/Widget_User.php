@@ -1,5 +1,4 @@
 <?php
-include_once 'Base/BaseWidget.php';
 class Widget_User extends BaseWidget
 {
 
