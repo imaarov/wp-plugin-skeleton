@@ -12,4 +12,4 @@ simple WordPress plugin core in OOP.
 - Custom Widget
 - Custom Setting (not yet)
 - Custom Taxonomy (not yet)
-### you can add custom fields in the class directory **Should extend from its Base **
+### you can add custom fields in the class directory **Should extend from its Base**
