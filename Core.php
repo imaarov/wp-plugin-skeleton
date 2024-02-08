@@ -99,7 +99,6 @@ class Core
      */
     public function load_entities(BaseInterface $baseClass) : self
     {
-        $baseClass;
         return $this;
     }
 }
