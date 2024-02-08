@@ -10,6 +10,6 @@ simple WordPress plugin core in OOP.
 - Custom MetaBox
 - Custom PostType
 - Custom Widget
-- Custom Setting (not yet)
+- Custom Setting
 - Custom Taxonomy (not yet)
 ### you can add custom fields in the class directory **Should extend from its Base**

@@ -14,7 +14,7 @@ abstract class BaseSetting implements BaseInterface
 
     public function __construct()
     {
-        add_action('init', [$this, 'register_setting']);
+        add_action('admin_init', [$this, 'register_setting']);
     }
 
     public function register_setting() : void

@@ -24,6 +24,7 @@ class GatePay_Setting extends BaseSetting
     public function title()
     {
         // TODO: Implement title() method.
+        echo "GateWay Setting";
     }
 
     public function layout()

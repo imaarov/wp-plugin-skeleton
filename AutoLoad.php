@@ -51,6 +51,9 @@ class AutoLoad
             }elseif (file_exists(trailingslashit(OOP_PLUGIN_DIR . 'class/PostType') . $class . '.php'))
             {
                 include_once trailingslashit(OOP_PLUGIN_DIR . 'class/PostType') . $class . '.php';
+            }elseif (file_exists(trailingslashit(OOP_PLUGIN_DIR . 'class/Setting') . $class . '.php'))
+            {
+                include_once trailingslashit(OOP_PLUGIN_DIR . 'class/Setting') . $class . '.php';
             }
         }
         return;

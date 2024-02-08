@@ -105,10 +105,11 @@ class Core
 }
 
 
-//var_dump(OOP_PLUGIN_DIR);
-//new PostType_Course();
 $core = new Core('oop');
+
+// These are my sample class that i make from Base class
 $core->load_entities(new User())
      ->load_entities(new MetaBox_VideoUrl())
      ->load_entities(new PostType_Course())
-     ->load_entities(new Widget_User());
+     ->load_entities(new Widget_User())
+     ->load_entities(new GatePay_Setting());
